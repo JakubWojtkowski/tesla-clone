@@ -1,11 +1,29 @@
 * {
-    box-sizing: border-box;
-    font-family: 'Rubik', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #393c41;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #393c41;
 }
 
 body {
-    width: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+@keyframes animateArrowDown {
+  0%,
+  20%,
+  50%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(4px);
+  }
+
+  60% {
+    transform: translateY(3px);
+  }
 }
