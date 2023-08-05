@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-function Section() {
+function Section(props) {
   return (
-    <Wrap>
+    <Wrap image={props.image}>
       <TextItem>
-        <h1>Model S</h1>
-        <p>Order Online for Touchless Delivery</p>
+        <h1>{props.title}</h1>
+        <p>{props.description}</p>
       </TextItem>
       <Buttons>
         <ButtonGroup>
@@ -33,6 +33,7 @@ const Wrap = styled.div`
   justify-content: space-between;
   align-items: center;
   text-align: center;
+  background-image: ${(props) => `url("/images/${props.image}")`};
 `;
 
 const TextItem = styled.div`
@@ -43,6 +44,10 @@ const TextItem = styled.div`
 const ButtonGroup = styled.div`
   display: flex;
   margin-bottom: 30px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const RightButton = styled.div`

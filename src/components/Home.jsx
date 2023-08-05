@@ -1,13 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 import Section from "./Section";
+import cars from "../carInfo.json";
 
 function Home() {
   return (
     <Container>
-      <Section />
-      <Section />
-      <Section />
+      {cars.map((car) => {
+        return <Section
+          key={car.id}
+          title={car.title}
+          description={car.description}
+          image={car.image}
+        />;
+      })}
     </Container>
   );
 }
