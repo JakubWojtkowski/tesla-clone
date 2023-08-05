@@ -1,18 +1,22 @@
 import React from "react";
 import styled from "styled-components";
 import Section from "./Section";
-import cars from "../carInfo.json";
+import cars from "../sectionInfo.json";
 
 function Home() {
   return (
     <Container>
       {cars.map((car) => {
-        return <Section
-          key={car.id}
-          title={car.title}
-          description={car.description}
-          image={car.image}
-        />;
+        return (
+          <Section
+            key={car.id}
+            title={car.title}
+            description={car.description}
+            image={car.image}
+            leftBtn={car.leftBtn}
+            rightBtn={car.rightBtn}
+          />
+        );
       })}
     </Container>
   );

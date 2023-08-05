@@ -10,8 +10,8 @@ function Section(props) {
       </TextItem>
       <Buttons>
         <ButtonGroup>
-          <LeftButton>Explore Inventory</LeftButton>
-          <RightButton>Custom Order</RightButton>
+          <LeftButton>{props.leftBtn}</LeftButton>
+          <RightButton>{props.rightBtn}</RightButton>
         </ButtonGroup>
         <DownArrow src="/images/down-arrow.svg"></DownArrow>
       </Buttons>
@@ -59,7 +59,7 @@ const RightButton = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 4px;
-  opacity: 0.75;
+  opacity: 0.85;
   font-size: 1rem;
   cursor: pointer;
   margin: 12px;
@@ -67,7 +67,7 @@ const RightButton = styled.div`
 
 const LeftButton = styled(RightButton)`
   background-color: #fff;
-  opacity: 0.65;
+  opacity: 0.7;
   color: #000;
 `;
 
