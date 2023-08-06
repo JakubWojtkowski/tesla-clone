@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
+import HelpOutlineIcon from "@material-ui/icons/HelpOutline";
+import LanguageIcon from "@material-ui/icons/Language";
+import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 
 function Header() {
   const [burgerStatus, setBurgerStatus] = useState(0);
@@ -21,8 +24,15 @@ function Header() {
       </Menu>
 
       <RightMenu>
-        <a href="#">Shop</a>
-        <a href="#">Tesla Account</a>
+        <a href="#">
+          <HelpOutlineIcon />
+        </a>
+        <a href="#">
+          <LanguageIcon />
+        </a>
+        <a href="#">
+          <AccountCircleIcon />
+        </a>
         <CustomMenu onClick={() => setBurgerStatus(1)} />
       </RightMenu>
 
@@ -76,11 +86,16 @@ const Menu = styled.div`
   flex: 1;
 
   a {
-    font-weight: 600;
-    text-transform: uppercase;
     padding: 0 10px;
     flex-wrap: nowrap;
-    font-size: 14px;
+    font-size: 1rem;
+  }
+
+  a:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+    backdrop-filter: blur(8px);
   }
 
   @media (max-width: 768px) {
@@ -94,15 +109,25 @@ const RightMenu = styled.div`
 
   a {
     font-weight: 600;
-    text-transform: uppercase;
     padding: 0 10px;
     flex-wrap: nowrap;
-    font-size: 14px;
+    font-size: 1rem;
+  }
+
+  a:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+    backdrop-filter: blur(8px);
   }
 `;
 
 const CustomMenu = styled(MenuIcon)`
   cursor: pointer;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
 
 const BurgerNav = styled.div`
@@ -119,6 +144,7 @@ const BurgerNav = styled.div`
   flex-direction: column;
   text-align: start;
   transform: ${(props) => (props.show ? "translateX(0)" : "translateX(100%)")};
+  transition: transform 0.2s ease-in;
 
   li {
     padding: 15px 0;

@@ -17,7 +17,9 @@ function Section(props) {
             <LeftButton>{props.leftBtn}</LeftButton>
             {props.rightBtn && <RightButton>{props.rightBtn}</RightButton>}
           </ButtonGroup>
-          <DownArrow src="/images/down-arrow.svg"></DownArrow>
+          {props.id === 0 && (
+            <DownArrow src="/images/down-arrow.svg"></DownArrow>
+          )}
         </Buttons>
       </Fade>
     </Wrap>
@@ -36,6 +38,7 @@ const Wrap = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-size: 1.2rem;
   align-items: center;
   text-align: center;
   background-image: ${(props) => `url("/images/${props.image}")`};

@@ -10,6 +10,7 @@ function Home() {
         return (
           <Section
             key={car.id}
+            id={car.id}
             title={car.title}
             description={car.description}
             image={car.image}
