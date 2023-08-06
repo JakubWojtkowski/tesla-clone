@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import MenuIcon from "@material-ui/icons/Menu";
-import CloseIcon from "@material-ui/icons/Close";
-import HelpOutlineIcon from "@material-ui/icons/HelpOutline";
-import LanguageIcon from "@material-ui/icons/Language";
-import AccountCircleIcon from "@material-ui/icons/AccountCircle";
+import CloseIcon from "@mui/icons-material/Close";
+import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
+import LanguageIcon from "@mui/icons-material/Language";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 function Header() {
   const [burgerStatus, setBurgerStatus] = useState(0);
