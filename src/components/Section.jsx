@@ -34,7 +34,6 @@ const Wrap = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("/images/model-s.jpg");
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -42,6 +41,8 @@ const Wrap = styled.div`
   align-items: center;
   text-align: center;
   background-image: ${(props) => `url("/images/${props.image}")`};
+  scroll-snap-align: start;
+  transition: all 1s ease;
 `;
 
 const TextItem = styled.div`
