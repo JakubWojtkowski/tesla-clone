@@ -8,9 +8,7 @@ function Footer() {
         <a href="#">Tesla © 2023</a>
         <a href="#">Privacy & Legal</a>
         <a href="#">Vehicle Recalls</a>
-        <a href="#">Contact</a>
         <a href="#">News</a>
-        <a href="#">Locations</a>
       </Menu>
     </Container>
   );
@@ -23,7 +21,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   background: #000;
-  height: 8vh;
+  min-height: 10vh;
   width: 100vw;
 `;
 
@@ -31,14 +29,20 @@ const Menu = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
   flex: 1;
 
   a {
-    padding: 0 10px;
+    padding: 8px;
     font-weight: 600;
     letter-spacing: 0.5px;
     font-size: 0.8rem;
     flex-wrap: nowrap;
     color: #c8c6c6;
+  }
+
+  @media (max-width: 594px) {
+    flex-direction: column;
+    margin: 20px auto;
   }
 `;
