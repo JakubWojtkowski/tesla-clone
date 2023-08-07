@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import Section from "./Section";
 import cars from "../sectionInfo.json";
-import Footer from "./Footer";
 
 function Home() {
   return (
@@ -20,7 +19,6 @@ function Home() {
           />
         );
       })}
-      <Footer />
     </Container>
   );
 }

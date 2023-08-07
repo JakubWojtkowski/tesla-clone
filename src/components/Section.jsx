@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
+import Footer from "./Footer";
 
 function Section(props) {
   return (
@@ -22,6 +23,7 @@ function Section(props) {
           )}
         </Buttons>
       </Fade>
+      {props.title === "Accessories" && <Footer />}
     </Wrap>
   );
 }
@@ -76,7 +78,7 @@ const RightButton = styled.div`
 
 const LeftButton = styled(RightButton)`
   background-color: #fff;
-  opacity: 0.7;
+  opacity: 0.8;
   color: #000;
 `;
 
